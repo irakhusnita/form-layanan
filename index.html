@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layanan Informasi</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background: linear-gradient(135deg,#e8fff1,#c8f7d6,#a8e6b5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    background:white;
+    padding:25px;
+    width:90%;
+    max-width:450px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    border-top:6px solid #2ecc71;
+}
+
+h2{
+    text-align:center;
+    color:#2ecc71;
+    margin-bottom:20px;
+}
+
+label{
+    font-size:14px;
+    color:#333;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus, textarea:focus{
+    border-color:#2ecc71;
+    box-shadow:0 0 5px rgba(46,204,113,0.4);
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#2ecc71;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#27ae60;
+    transform:scale(1.02);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+<h2>Layanan Informasi</h2>
+
+<form action="https://formsubmit.co/irakhusnita98@gmail.com" method="POST">
+
+    <!-- setting formsubmit -->
+    <input type="hidden" name="_subject" value="Pesan Baru dari Website">
+    <input type="hidden" name="_captcha" value="false">
+
+    <label>Nama (silakan isi nama)</label>
+    <input type="text" name="Nama" required>
+
+    <label>Email (silakan isi email)</label>
+    <input type="email" name="Email" required>
+
+    <label>Pesan / Komentar (silakan isi pesan)</label>
+    <textarea name="Pesan" rows="5" required></textarea>
+
+    <button type="submit">Kirim Pesan</button>
+
+</form>
+</div>
+
+</body>
+</html>
