@@ -3,38 +3,136 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Layanan Informasi</title>
+<title>Chat Layanan Informasi</title>
 
 <style>
 body{
     margin:0;
     font-family:Arial, sans-serif;
-    background: linear-gradient(135deg,#e8fff1,#c8f7d6,#a8e6b5);
+    background:#e5ddd5;
     display:flex;
     justify-content:center;
     align-items:center;
-    min-height:100vh;
+    height:100vh;
 }
 
-.container{
-    background:white;
-    padding:25px;
-    width:90%;
+/* WA container */
+.chat-box{
+    width:100%;
     max-width:450px;
-    border-radius:15px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
-    border-top:6px solid #2ecc71;
+    height:90vh;
+    background:#efeae2;
+    display:flex;
+    flex-direction:column;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
-h2{
+/* header */
+.header{
+    background:#075e54;
+    color:white;
+    padding:15px;
+    font-weight:bold;
     text-align:center;
-    color:#2ecc71;
-    margin-bottom:20px;
 }
 
-label{
+/* chat area */
+.chat-area{
+    flex:1;
+    padding:15px;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+/* bubble */
+.bubble{
+    background:white;
+    padding:10px 12px;
+    border-radius:10px;
+    max-width:80%;
     font-size:14px;
-    color:#333;
+}
+
+.bubble.bot{
+    align-self:flex-start;
+}
+
+.bubble.user{
+    align-self:flex-end;
+    background:#dcf8c6;
+}
+
+/* input area */
+.input-area{
+    display:flex;
+    padding:10px;
+    background:#f0f0f0;
+    gap:5px;
+}
+
+.input-area input,
+.input-area textarea{
+    flex:1;
+    padding:8px;
+    border-radius:20px;
+    border:1px solid #ccc;
+    outline:none;
+    resize:none;
+}
+
+.input-area button{
+    background:#25d366;
+    border:none;
+    color:white;
+    padding:10px 15px;
+    border-radius:20px;
+    cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="chat-box">
+
+    <div class="header">
+        💬 Layanan Informasi
+    </div>
+
+    <div class="chat-area">
+        <div class="bubble bot">Halo 👋 Silakan isi pesan kamu di bawah</div>
+        <div class="bubble bot">Pesan akan langsung masuk ke admin</div>
+    </div>
+
+    <form action="https://formsubmit.co/irakhusnita98@gmail.com" method="POST">
+
+        <input type="hidden" name="_subject" value="Chat Baru dari Website">
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="input-area">
+            <input type="text" name="Nama" placeholder="Nama" required>
+        </div>
+
+        <div class="input-area">
+            <input type="email" name="Email" placeholder="Email" required>
+        </div>
+
+        <div class="input-area">
+            <textarea name="Pesan" rows="1" placeholder="Tulis pesan..." required></textarea>
+            <button type="submit">Kirim</button>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>    color:#333;
 }
 
 input, textarea{
